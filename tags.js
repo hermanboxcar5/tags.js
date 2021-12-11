@@ -50,18 +50,77 @@ tags.init.dev.rawRender = function() {
   }
   document.body.innerHTML = c2.join('');
 }
-let objs = document.querySelectorAll( 'body *' );
-console.log(objs)
-Array.from(objs).map(x => {
-if (x.hasAttribute('loc') && x.hasAttribute('trig')){
-let loc = x.getAttribute('loc')
-let trig = x.getAttribute('trig')
-console.log('sus')
-let functionAtLast = function() {location.href = loc}
-x.addEventListener(trig, functionAtLast)
 
+   
+window._ = function(q, i) {
+  let rvc = document.querySelectorAll(q)
+  if (i == null) {
+  rvc = rvc[0]
+  rvc.txt = e => {       if (e == null || e == undefined || e == "") {
+           return rvc.innerText
+         } else {
+            rvc.innerText = e
+         }
+   }
+
+  rvc.val = e => {
+         if (e == null || e == undefined || e == "") {
+           return rvc.value
+         } else {
+         rvc.value = e;
+         }
+      }
+  rvc.html = e => {if (x == null || x == undefined || x == "") {
+           return rvc.outerHTML
+         } else {
+         rvc.outerHTML = x;
+         }
+                  }
+  } else if (i < rvc.length) {
+  rvc = rvc[i]
+    rvc.txt = e => {       if (e == null || e == undefined || e == "") {
+           return rvc.innerText
+         } else {
+            rvc.innerText = e
+         }
+   }
+
+  rvc.val = e => {
+         if (e == null || e == undefined || e == "") {
+           return rvc.value
+         } else {
+         rvc.value = e;
+         }
+      }
+  rvc.html = e => {if (x == null || x == undefined || x == "") {
+           return rvc.outerHTML
+         } else {
+         rvc.outerHTML = x;
+         }
+                  }  }
+  return rvc
 }
-})
+function gettxt(e) {
+         if (e == null || e == undefined || e == "") {
+           return rvc.innerText
+         } else {
+            rvc.innerText = e
+         }
+   }
 
-         
-window.tags = tags;
+function getval(e){
+         if (e == null || e == undefined || e == "") {
+           return rvc.value
+         } else {
+         rvc.value = e;
+         }
+      }
+function gethtml(x) {
+         if (x == null || x == undefined || x == "") {
+           return rvc.innerHTML
+         } else {
+         rvc.innerHTML = x;
+         }
+      }
+tags.init.dev.rawRender()
+window.tags = tags
