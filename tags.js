@@ -124,5 +124,8 @@ function gethtml(x) {
          rvc.innerHTML = x;
          }
       }
+tags.newVar = function(name, value) {
+  window[name] = value
+}
 tags.init.dev.rawRender()
 window.tags = tags
