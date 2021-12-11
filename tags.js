@@ -99,7 +99,9 @@ window._ = function(q, i) {
          }
                   }  }
   return rvc
+
 }
+
 function gettxt(e) {
          if (e == null || e == undefined || e == "") {
            return rvc.innerText
